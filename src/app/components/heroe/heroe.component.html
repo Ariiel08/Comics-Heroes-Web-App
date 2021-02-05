@@ -1,12 +1,12 @@
-<h1>{{heroe.nombre}}  <small>| {{heroe.aparicion}}</small></h1>
+<h1 class="animated fadeIn">{{heroe.nombre}}  <small>| {{heroe.aparicion}}</small></h1>
 
-<div class="row">
+<div class="row animated fadeIn fast">
     <div class="col-md-4">
 
         <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
         <br><br>
 
-        <a class="btn btn-outline-danger btn-block" [routerLink]="['heroes']">Regresar...</a>
+        <a class="btn btn-outline-danger btn-block" [routerLink]="['/heroes']">Regresar...</a>
 
     </div>
 
@@ -19,8 +19,8 @@
         <div *ngIf="heroe.casa == 'Marvel'; else other">
             <img src="assets/img/Marvel-icon.png" alt="">
         </div>
-        <div #other>
+        <ng-template #other>
             <img src="assets/img/DC-Comics-icon.png" alt="">
-        </div>
+        </ng-template>
     </div>
 </div>
