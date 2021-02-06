@@ -23,5 +23,4 @@ export class HeroesSearchComponent implements OnInit {
   verHeroe(idx: number){
     this.router.navigate(['/heroe',idx]);
   }
-
 }
